@@ -31,8 +31,10 @@ subprojects {
         implementation 'org.springframework.boot:spring-boot-starter'
         compile 'org.projectlombok:lombok'
         annotationProcessor 'org.projectlombok:lombok'
-
     }
-
-
+}
+project(':module-api'){
+    dependencies {
+        implementation project(':module-common')
+    }
 }
